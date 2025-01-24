@@ -8,7 +8,7 @@ def home():
     weather_data = None
     if request.method == "POST":
         city = request.form.get("city")
-        api_key = "cd652d6138424cab4cc131f0b2418ad2"  # Replace with your Weatherstack API key
+        api_key = "key"  # Replace with your Weatherstack API key
         base_url = "http://api.weatherstack.com/current"
         params = {"access_key": api_key, "query": city}
 
