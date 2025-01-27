@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from flask_mysql import MySQL
+from flask_mysqldb import MySQL
 import requests
 from dotenv import load_dotenv
 import os
@@ -9,6 +9,10 @@ load_dotenv()
 
 # Access the variables
 api_key = os.getenv("API_KEY")
+test_user = os.getenv("TEST_USER")
+test_password = os.getenv("TEST_PASSWORD")
+
+
 
 app = Flask(__name__)
 
@@ -25,7 +29,7 @@ def home():
     weather_data = None
     if request.method == "POST":
         city = request.form.get("city")
-        api_key = "key"  # Replace with your Weatherstack API key
+        # api_key = "key"  # Replace with your Weatherstack API key
         base_url = "http://api.weatherstack.com/current"
         params = {"access_key": api_key, "query": city}
 
