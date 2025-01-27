@@ -31,58 +31,58 @@ This is a simple weather application built with Flask. It allows users to fetch 
     ```
 4. **Set Up Environment Variables** Create a .env file in the root directory and add the following:
 
-
-API_KEY=your_weatherstack_api_key
-TEST_USER=username
-TEST_PASSWORD=password
+    ```makefile
+    API_KEY=your_weatherstack_api_key
+    TEST_USER=username
+    TEST_PASSWORD=password
+    ```
 5. **Set Up the Database**
 
 Install MySQL and create the required databases:
-~~~~sql
-CREATE DATABASE flask_weather_app;
-CREATE DATABASE test_flask_weather_app;
-~~~~
+    ~~~~sql
+    CREATE DATABASE flask_weather_app;
+    CREATE DATABASE test_flask_weather_app;
+    ~~~~
 Set up the weather_logs table:
-~~~~sql
-USE flask_weather_app;
-CREATE TABLE weather_logs (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    city VARCHAR(255),
-    temperature VARCHAR(255),
-    description VARCHAR(255),
-    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-~~~~
+    ~~~~sql
+    USE flask_weather_app;
+    CREATE TABLE weather_logs (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        city VARCHAR(255),
+        temperature VARCHAR(255),
+        description VARCHAR(255),
+        timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+    ~~~~
 6. **Run the Application**
 
-
-python app.py
+    ```bash
+    python app.py
+    ```
 7. **Access the App Open your browser and visit: http://localhost:5000**
 
 Testing
 Run Tests
 
-bash
-Copy
-Edit
-pytest test_app.py
-What’s Tested
+    ```bash
+    pytest test_app.py
+    ```
+
 
 Home page loads successfully.
 Weather API mocking to test POST requests without hitting the actual API.
 File Structure
-bash
-Copy
-Edit
-flask-weather-app/
-│
-├── app.py                  # Main application
-├── test_app.py             # Test cases for the app
-├── templates/
-│   └── weather.html        # HTML template for the app
-├── .env                    # Environment variables
-├── requirements.txt        # Python dependencies
-└── README.md               # Documentation
+    ```bash
+    flask-weather-app/
+    │
+    ├── app.py                  # Main application
+    ├── test_app.py             # Test cases for the app
+    ├── templates/
+    │   └── weather.html        # HTML template for the app
+    ├── .env                    # Environment variables
+    ├── requirements.txt        # Python dependencies
+    └── README.md               # Documentation
+    ```
 API Key Management
 The API key for Weatherstack is stored in the .env file for security.
 Make sure the .env file is included in .gitignore to prevent exposing secrets.
@@ -96,9 +96,6 @@ Feel free to fork the repository and submit pull requests. Contributions are wel
 License
 This project is licensed under the MIT License.
 
-yaml
-Copy
-Edit
 
 ---
 
