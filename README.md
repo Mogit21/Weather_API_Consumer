@@ -17,39 +17,33 @@ This is a simple weather application built with Flask. It allows users to fetch 
    ```bash
    git clone https://github.com/yourusername/flask-weather-app.git
    cd flask-weather-app
-Set Up a Virtual Environment
+   ```
+2. **Set Up a Virtual Environment**
 
-bash
-Copy
-Edit
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-Install Dependencies
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```
+3. **Install Dependencies**
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Set Up Environment Variables Create a .env file in the root directory and add the following:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. **Set Up Environment Variables** Create a .env file in the root directory and add the following:
 
-makefile
-Copy
-Edit
+
 API_KEY=your_weatherstack_api_key
-TEST_USER=root
-TEST_PASSWORD=root
-Set Up the Database
+TEST_USER=username
+TEST_PASSWORD=password
+5. **Set Up the Database**
 
 Install MySQL and create the required databases:
-sql
-Copy
-Edit
+~~~~sql
 CREATE DATABASE flask_weather_app;
 CREATE DATABASE test_flask_weather_app;
+~~~~
 Set up the weather_logs table:
-sql
-Copy
-Edit
+~~~~sql
 USE flask_weather_app;
 CREATE TABLE weather_logs (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -58,13 +52,12 @@ CREATE TABLE weather_logs (
     description VARCHAR(255),
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-Run the Application
+~~~~
+6. **Run the Application**
 
-bash
-Copy
-Edit
+
 python app.py
-Access the App Open your browser and visit: http://localhost:5000
+7. **Access the App Open your browser and visit: http://localhost:5000**
 
 Testing
 Run Tests
